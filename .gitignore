@@ -1,2 +1,39 @@
-*.agdai
-MAlonzo/**
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiệp Cưới Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <div class="wedding-card">
+        <h1>Chúng tôi kết hôn!</h1>
+        <img src="couple.jpg" alt="Cặp đôi" class="couple-image">
+        <p>Trân trọng kính mời bạn đến dự lễ cưới của chúng tôi.</p>
+        <p>Thời gian: 10:00 AM, Ngày 20 tháng 10 năm 2025</p>
+        <p>Địa điểm: Nhà hàng Hạnh Phúc, 123 Đường Hạnh Phúc, TP. Hồ Chí Minh</p>
+
+        <div id="map" style="height: 200px; margin: 20px 0;"></div>
+
+        <form id="rsvp-form">
+            <label for="name">Tên của bạn:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="guests">Số lượng khách:</label>
+            <input type="number" id="guests" name="guests" min="1" required>
+            <button type="submit">Xác nhận tham dự</button>
+        </form>
+
+        <audio controls autoplay loop>
+            <source src="wedding-music.mp3" type="audio/mpeg">
+            Trình duyệt của bạn không hỗ trợ phát nhạc.
+        </audio>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
